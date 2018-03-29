@@ -15,9 +15,9 @@
 #define INIT_CUDA_GL 1
 #include<string>
 #include "NvEncoderCudaInterop.h"
-#include "../common/inc/nvUtils.h"
-#include "../common/inc/nvFileIO.h"
-#include "../common/inc/helper_string.h"
+#include "common/inc/nvUtils.h"
+#include "common/inc/nvFileIO.h"
+#include "common/inc/helper_string.h"
 #include "dynlink_builtin_types.h"
 
 #include <stdio.h>

@@ -11,7 +11,7 @@
 ////////////////////////////////////////////////////////////////////////////
 
 
-#include "../common/inc/NvHWEncoder.h"
+#include "common/inc/NvHWEncoder.h"
 
 #define MAX_ENCODE_QUEUE 32
 
