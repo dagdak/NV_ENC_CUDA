@@ -404,7 +404,7 @@ NVENCSTATUS CNvEncoderCudaInterop::InitCuda(unsigned int deviceID, const char *e
     jitOptVals[2] = (void *)(size_t)jitRegCount;
 
     string ptx_source;
-    char *ptx_path = sdkFindFilePath(PTX_FILE, exec_path);
+    char *ptx_path = "./data/argb2nv12.ptx";//sdkFindFilePath(PTX_FILE, exec_path);
     if (ptx_path == NULL) {
         PRINTERR("Unable to find ptx file path %s\n", PTX_FILE);
         return NV_ENC_ERR_INVALID_PARAM;
@@ -750,7 +750,7 @@ NVENCSTATUS CNvEncoderCudaInterop::CopyArrayToDevice(CUdeviceptr* cudevicePtr, i
     __cu(cuGraphicsSubResourceGetMappedArray( &m_RGBArrayPtr, m_graphicsResource, 0, 0 ));
 
 	CUDA_MEMCPY2D cpyParam;
-     memset(&cpyParam, 0, sizeof(cpyParam));
+    memset(&cpyParam, 0, sizeof(cpyParam));
 	cpyParam.srcMemoryType = CU_MEMORYTYPE_ARRAY;
 	cpyParam.srcArray = m_RGBArrayPtr;
 	cpyParam.srcXInBytes = 0;
@@ -985,7 +985,7 @@ int CNvEncoderCudaInterop::EncodeMain(int argc, char *argv[])
     numBytesRead = 0;
     //for (int frm = encodeConfig.startFrameIdx; frm <= encodeConfig.endFrameIdx; frm++)
     // loadRGBframe(m_rgb, hInput, 0, encodeConfig.width, encodeConfig.height, numBytesRead);
-    for (int frm = 0; frm <= 100; frm++)
+    for (int frm = 0; frm <= 2; frm++)
     {
 
         pEncodeBuffer = m_EncodeBufferQueue.GetAvailable();
