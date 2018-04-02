@@ -11,22 +11,22 @@ set(SRCS
     NvEncoderCudaInterop.h
     )
 include_directories(
-    .
-    ./common/inc/
+    #.
+    #./common/inc/
     /usr/include/libdrm
-    /system/lib/nvidia/include
+    #/system/lib/nvidia/include
     )
 link_directories(
-    /usr/lib
-    /usr/lib/i386-linux-gnu
+    #/usr/lib
+    #/usr/lib/i386-linux-gnu
     )
 add_executable(${TARGET} ${SRCS})
 target_link_libraries(
     ${TARGET}
-    -L/usr/lib64 
+    #-L/usr/lib64 
     -lnvidia-encode 
     -ldl 
-    -lOpenGL 
+    -lGL 
     -lEGL 
     -ldrm
     )

@@ -1,6 +1,6 @@
 *.o
 tags
-MakeFile
+Makefile
 CMakeCache.txt
 cmake_install.cmake
 CMakeFiles/
