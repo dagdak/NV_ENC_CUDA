@@ -5,4 +5,4 @@ CMakeCache.txt
 cmake_install.cmake
 CMakeFiles/
 output.h264
-
+NvEncoderCudaInterop

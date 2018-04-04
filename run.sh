@@ -1,4 +1,4 @@
-make clean && make
+#make clean && make
 
 #LD_PRELOAD=/usr/local/cuda/lib/libcudart.so 
 ./NvEncoderCudaInterop -i $PWD/1920x1080_RGB_tosscreen.rgb \

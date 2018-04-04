@@ -14,6 +14,7 @@ include_directories(
     #.
     #./common/inc/
     /usr/include/libdrm
+    /system/include
     #/system/lib/nvidia/include
     )
 link_directories(
